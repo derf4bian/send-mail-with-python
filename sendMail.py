@@ -6,12 +6,12 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('<usser@mail.com>', 'password')
+    server.login('your-mail', 'password') #paste your google mail and your pw created on https://myaccount.google.com/apppasswords here
 
     subject = 'Enter subject here'
     body = 'Enter the text of the email here'
     msg = f"Subject: {subject}\n\n{body}"
 
-    server.sendmail('from-mail', 'to-mail', msg)
+    server.sendmail('from-mail', 'to-mail', msg)  # replace from-mail with your own google mail and the to-mail with your receivers mail
     print('-email has been send-')
     server.quit()
